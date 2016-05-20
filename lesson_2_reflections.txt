@@ -1,0 +1,21 @@
+Repositories
+  	Inside a repository, there is a .git folder. This is hidden using the period.
+	You can see it using ls -a  (list files -all)
+ 
+Creating a new Repository
+	git init
+	Using an existing directory with files in it or without.
+	There are no commits when you create a git. You need to create the first "snapshot".
+
+Review a git repository
+	git status
+	Shows all changes since the last commit
+	Also shows you which branch you are in
+	
+The Staging Area
+	git add <filename>
+	File ready to be commited. Use git status to see which files are untracked, tracked.
+	Staging Area - like a checkpoint for the files you want to commit
+	Working Directory - Where you see files in current state
+	Repository - shows all versions
+
