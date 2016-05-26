@@ -1,7 +1,7 @@
 Using Git with GitHub
 
 Remotes - remote repositories are repositories located on github
-
+Use remotes when not using a single laptop or on collaborative projects
 	git remote   -view remote repository
 	git remote add <remote name>  <url or remote>
 	git remote -v   - v=verbose  so more info
