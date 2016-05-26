@@ -16,6 +16,68 @@ The Staging Area
 	git add <filename>
 	File ready to be commited. Use git status to see which files are untracked, tracked.
 	Staging Area - like a checkpoint for the files you want to commit
+			use git diff and git diff --staged to see what changes will be committed 
 	Working Directory - Where you see files in current state
 	Repository - shows all versions
+
+Committing changes
+	git commit
+	A text file is added. add you comment for the change - short, logical, excalmative case.
+	running git log, you can see the new commit
+	running git status, the added files from git add are no longer listed. list of unadded files
+
+git checkout master
+	most recent version in repository
+
+git diff  (no arguments)
+	Compares the staged area (added ready to commit) with the working directory (all changes made since previous commit)
+
+git diff --staged
+	Compare the current commit with the staging area 
+
+git reset --hard
+	Reverts working directory AND staging area to the most recent commit
+
+
+What is a "Head"?
+
+Branches
+	Good for trying out experimental ideas while carrying on with the original and fixing bugs etc.
+	Detached head state - no branch checked out
+	Master branch
+	git branch - lists all branches available
+	git branch <name>  - creates new branch with name <name>
+	git checkout <branch name> - checks out branch
+
+See branches graphically:
+	git log --graph <branchname1> <branchname2>
+	git log --graph --oneline <branchname1> <branchname2>
+	This helps you understand whether a commit is in a branch or not, and where divergence occurs.
+
+
+git checkout -b <newbranchname>   - create new branch and checkout
+
+sometimes there are commits that are not attached to a branch
+	git gc
+
+git show <commitname>  - compares commit to its parent
+
+git branch -d <branchname>   - deletes a branch name  NB: deletes the label not the commits
+
+
+Merging is time efficient, but errors and bugs can occur.
+
+Merge branch into Master
+	git checkout master   -main branch checked out first
+	git merge <branch1> <branch2>   -merge branches
+
+Merge branch to include Master
+	git checkout easy-mode   -side branch because we want the final to be easy-mode not master
+	git merge master easy-mode
+
+When there is a conflict
+	error shown during merge. files given. error between <<<< and ||||||
+	resolve the conflict by editing the file. remember to remove the error signs.
+	commit the change. this is labelled as "both modified" in diff
+
 
