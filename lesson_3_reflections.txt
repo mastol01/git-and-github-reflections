@@ -1,0 +1,10 @@
+Using Git with GitHub
+
+Remotes - remote repositories are repositories located on github
+
+	git remote   -view remote repository
+	git remote add <remote name>  <url or remote>
+	git remote -v   - v=verbose  so more info
+
+	git push <remote name> <branch name>   - copies the branch to the remote repository
+
